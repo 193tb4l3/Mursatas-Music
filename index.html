@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mursatas Music</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <img src="Mursatas it.png" alt="Mursatas Music Logo" id="logo">
+        <h2>Mursatas it</h2>
+        <button id="menu-toggle" aria-label="Toggle Menu">☰</button>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Beranda</a></li>
+                <li><a href="#lirik"><i class="fas fa-music"></i> Lirik Lagu</a></li>
+                <li><a href="#tentang"><i class="fas fa-info-circle"></i> Tentang</a></li>
+                <li><a href="#kontak"><i class="fas fa-envelope"></i> Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="hero-section">
+    <!-- Video Background -->
+    <video autoplay muted loop id="hero-video">
+        <source src="LOMBOK UTARA.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="hero-content">
+        <h2>Selamat Datang di Mursatas it</h2>
+        <p>Tempatnya lirik lagu Sasak terbaik!</p>
+        <a href="#lirik" class="cta-button">Lihat Lirik Lagu <i class="fas fa-arrow-right"></i></a>
+    </div>
+    <div class="hero-icons">
+        <i class="fas fa-music animate-icon"></i>
+        <i class="fas fa-headphones animate-icon"></i>
+        <i class="fas fa-microphone animate-icon"></i>
+    </div>
+</div>
+
+        <section id="lirik">
+            <h2>Koleksi Lirik Lagu Sasak</h2>
+            <div class="lyrics-grid">
+                <div class="lyric-card">
+                    <h3><i class="fas fa-compact-disc"></i> Buak Bile</h3>
+                    <p>Lirik lagu tradisional Sasak yang penuh makna.</p>
+                    <a href="buak bile.html" class="card-button">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="lyric-card">
+                    <h3><i class="fas fa-compact-disc"></i> Gugur Mayang</h3>
+                    <p>Lagu yang menggambarkan keindahan alam Sasak.</p>
+                    <a href="gugur mayang.html" class="card-button">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="lyric-card">
+                    <h3><i class="fas fa-compact-disc"></i> Batu Jongkor</h3>
+                    <p>Lagu yang bercerita tentang kehidupan masyarakat Sasak.</p>
+                    <a href="batu jongkor.html" class="card-button">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="lyric-card">
+                    <h3><i class="fas fa-compact-disc"></i> Jauq Ate Sede</h3>
+                    <p>Lagu yang penuh dengan pesan moral dan kebijaksanaan.</p>
+                    <a href="jauq ate sede.html" class="card-button">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="tentang">
+            <h2><i class="fas fa-info-circle"></i> Tentang Mursatas it</h2>
+            <p>Website ini dibuat untuk mendokumentasikan dan membagikan lirik lagu Sasak.</p>
+        </section>
+
+        <section id="kontak">
+            <h2><i class="fas fa-envelope"></i> Kontak</h2>
+            <p>Email: info@mursatasit.com</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Mursatas it. Semua hak dilindungi.</p>
+    </footer>
+
+    <script>
+        // Script untuk toggle menu pada mobile
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const nav = document.getElementById('main-nav');
+            nav.classList.toggle('active');
+        });
+
+        // Script untuk efek scroll header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
